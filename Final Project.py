@@ -4,9 +4,10 @@
 
 # Imports the necessary modules
 import random
+import time
 
 dice = int(input("How many dice do you want to roll? "))
-sides = int(input("How many sides do you want the dice to have? ")
+sides = int(input("How many sides do you want the dice to have? "))
 roll = True
 # Sets the roll variable as true
 
@@ -14,6 +15,7 @@ roll = True
 while roll:
     print("rolling dice...")
     for i in range (dice):
+        time.sleep(1)
         print("You rolled", random.randit(1, sides))
     roll = input("Do you want to roll again? (yes or no): ")
 # Prints a number between 1 and 6 and asks if the user wants to roll again
@@ -23,4 +25,5 @@ while roll:
         continue
     else:
         break
+print("Thank you for rolling the dice")
 
