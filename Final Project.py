@@ -8,22 +8,29 @@ import time
 
 dice = int(input("How many dice do you want to roll? "))
 sides = int(input("How many sides do you want the dice to have? "))
+sum = input("Do you want to add your dice together? (yes or no): ")
 roll = True
-# Sets the roll variable as true
 
-# Added "while' loop to ask for later use input
 while roll:
+    amount = 0
     print("rolling dice...")
     for i in range (dice):
         time.sleep(1)
-        print("You rolled", random.randit(1, sides))
+        number = random.randit(1, sides)
+        print("You rolled", number)
+        amount = amount + number
+    if sum == "yes":
+        print amount
+    else:
+        time.sleep(0)
+
     roll = input("Do you want to roll again? (yes or no): ")
-# Prints a number between 1 and 6 and asks if the user wants to roll again
     if roll == "yes":
         dice = int(input("How many dice do you want to roll? "))
         sides = int(input("How many sides do you want the dice to have? ")
         continue
     else:
         break
+        
 print("Thank you for rolling the dice")
 
