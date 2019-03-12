@@ -9,6 +9,7 @@ import time
 dice = int(input("How many dice do you want to roll? "))
 sides = int(input("How many sides do you want the dice to have? "))
 sum = input("Do you want to add your dice together? (yes or no): ")
+average = input("Do you want to average your dice roll? (yes or no): ")
 roll = True
 
 while roll:
@@ -20,17 +21,20 @@ while roll:
         print("You rolled", number)
         amount = amount + number
     if sum == "yes":
-        print amount
-    else:
-        time.sleep(0)
+        print("Sum: ", amount)
+    if average == "yes":
+        sumav = amount/(float(dice))
+        print("Average: ", sumav)
 
     roll = input("Do you want to roll again? (yes or no): ")
     if roll == "yes":
         dice = int(input("How many dice do you want to roll? "))
-        sides = int(input("How many sides do you want the dice to have? ")
+        sides = int(input("How many sides do you want the dice to have? "))
+        sum = input("Do you want to add your dice together? (yes or no): ")
+        average = input("Do you want to average your dice roll? (yes or no): ")
         continue
     else:
         break
-        
+
 print("Thank you for rolling the dice")
 
