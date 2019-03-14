@@ -3,9 +3,9 @@
 # Roll a Dice
 
 '''
-This program asks a user to roll a specified number of dice with a specified number
-of sides. Then if the user wishes, the program can add up all the values and average
-them.
+Me and Sophia made this program for our final exam project in our CSSE asks a
+user to roll a specified number of dice with a specified number of sides. Then
+if the user wishes, the program can add up all the values and average them.
 '''
 
 # Imports the needed module
